@@ -4,7 +4,7 @@ const ArticlesService = {
   },
   insertArticle(knex, newArticle) {
     return knex
-      .insert("newArticle")
+      .insert(newArticle)
       .into("blogful_articles")
       .returning("*")
       .then(rows => {
